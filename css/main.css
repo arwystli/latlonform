@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pagetitle {
+  font-size: 18px;
+}
+.strapline {
+  font-size: 14px;
+  font-style: italic;
+}
+.pageheading {
+  font-size: 16px;
+}
+.active {
+  color: #4040B0;
+}
+.link {
+  text-decoration: none;
+}
+.footer {
+  margin: 18px 0 0 0;
+  padding: 8px 0 0 0;
+  background: #C0C0C0;
+  vertical-align: top;
+  text-align: center;
+  color: #404040;
+  height: 100px;
+}
+
+#mainpage {
+  padding: 8px 8px 8px 8px;
+  width: 1280px;
+  margin: auto;
+}
+#main-menu li {
+  display: inline;
+  padding: 0px 3px 0px 3px;
+}
+/* flexbox */
+.form-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  height: 24px;
+  margin: 0 0 12px 0;
+  padding: 0 0 0 0;
+}
+.form-input-item-label {
+  text-align: right;
+  align-self: baseline;
+  width: 90px;
+  padding: 0 4px 0 0;
+}
+.form-input-item input {
+  width: 150px;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 24px;
+  width: 260px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.button-item {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}

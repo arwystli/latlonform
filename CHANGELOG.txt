@@ -1,0 +1,36 @@
+commit f0b612d
+Author: Bob Hutchinson <hutch@whs4.whs>
+Date:   Mon Jul 23 13:47:18 2018 +0100
+
+    initial commit
+
+.htaccess
+Gruntfile.js
+README.md
+config.inc
+css/layout.less
+css/main.css
+css/main.min.css
+css/style.less
+incs/dump.inc
+incs/form.inc
+incs/funcs.inc
+incs/init.inc
+incs/layout.inc
+incs/page_ll.inc
+incs/page_ll_q.inc
+index.php
+js/all.js
+js/all.min.js
+js/jquery.latlonfield.js
+js/main.js
+package.json
+
+commit f98d506
+Author: Bob Hutchinson <hutchgt@arwystli.net>
+Date:   Mon Jul 23 13:42:58 2018 +0100
+
+    Initial commit
+
+LICENSE
+README.md
