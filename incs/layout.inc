@@ -33,7 +33,7 @@
 <?php
 include(BASE_PATH . '/incs/page_' . $vars['page'] . '.inc');
 ?>
-    <div class="footer">hello I am A footer</div>
+    <div class="footer"><a href="https://github.com/arwystli/latlonform" >github latlonform</a></div>
 <?php
 if ($vars['dev']) {
   echo "<hr>\n";

@@ -1,10 +1,19 @@
-commit f0b612d
+commit 39319c5
+Author: Bob Hutchinson <hutch@whs4.whs>
+Date:   Wed Jul 25 08:34:54 2018 +0100
+
+    better footer
+
+incs/layout.inc
+
+commit 7a5242e
 Author: Bob Hutchinson <hutch@whs4.whs>
 Date:   Mon Jul 23 13:47:18 2018 +0100
 
     initial commit
 
 .htaccess
+CHANGELOG.txt
 Gruntfile.js
 README.md
 config.inc
