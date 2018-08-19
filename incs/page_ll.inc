@@ -7,8 +7,8 @@
  * An example structure in PHP, handle ll outputs
  */
 
-if ($vars['lat'] && $vars['lon']) {
-  print "<p>" . "Latitude: " . $vars['lat'] . " Longitude: " . $vars['lon'] . "</p>";
+if ($vars['returns'][$vars['page']]['lat'] && $vars['returns'][$vars['page']]['lon']) {
+  print "<p>" . "Latitude: " . $vars['returns'][$vars['page']]['lat'] . " Longitude: " . $vars['returns'][$vars['page']]['lon'] . "</p>";
 }
 print '<h4 class="pageheading">' . $vars['pageheadings'][$vars['page']] . ":</h4>";
-include(BASE_PATH . '/incs/form.inc');
+include(BASE_PATH . '/incs/form_' . $vars['page'] . '.inc');

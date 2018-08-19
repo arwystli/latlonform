@@ -1,6 +1,8 @@
 @activelinkcolor: #4040B0;
 @footerbg: #C0C0C0;
 @footerfg: #404040;
+@form-container-bg: #F8F8FF;
+@form-container-label-bg: #E8E8EF;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +17,6 @@ body {
 }
 .pageheading {
   font-size: 16px;
-
 }
 .active {
   color: @activelinkcolor;
@@ -30,5 +31,17 @@ body {
   vertical-align: top;
   text-align: center;
   color: @footerfg;
-  height: 100px;
+  height: 50px;
+}
+.form-container-l, .form-container-r, .form-container-u {
+  background: @form-container-bg;
+}
+
+#fmsubmbtn {
+  font: bold 14px/1.5 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+
+.form-container-l-label, .form-container-r-label, .form-container-u-label {
+  background:  @form-container-label-bg;
+  height: 22px;
 }

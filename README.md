@@ -1,5 +1,4 @@
-# latlonform
-latitude and longitude html form
+latlonform
 Author Bob Hutchinson <hutch@arwystli.net>
 
 This simple project provides a form for collecting decimal latitude and longitude.
@@ -10,3 +9,5 @@ To make use of this project you can install it by unpacking it into a folder. Yo
 If you want to use grunt you will need to have that installed globally, the cd into the project and type "npm install",
 this will install the modules mentioned in package.json
 Alternately you can just pilfer the project for useful bits such as the javascript files that manage the form.
+
+Formalize has been included, see http://formalize.io. Marvellous stuff IMHO.

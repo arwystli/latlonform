@@ -1,4 +1,7 @@
 @form-itemheight: 24px;
+@container-ld-width: 236px;
+@button-container-ld-width: 678px;
+@form-container-border: 1px solid #A0A0A0;
 
 #mainpage {
   padding: 8px 8px 8px 8px;
@@ -24,8 +27,8 @@
 .form-input-item-label {
   text-align: right;
   align-self: baseline;
-  width: 90px;
-  padding: 0 4px 0 0;
+  width: 82px;
+  padding-right: 4px;
 }
 .form-input-item input {
   width: 150px;
@@ -34,12 +37,55 @@
 .button-container {
   display: flex;
   justify-content: flex-end;
-  height: @form-itemheight;
-  width: 260px;
+/*  height:  @form-itemheight; */
+  width: 245px;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
+.button-container-ld {
+  display: flex;
+  justify-content: flex-end;
+/*  height: @form-itemheight;
+  height: 28px;*/
+/*  width: @button-container-ld-width;*/
+  width: 94px;
+  margin: 90px 0 0 0;
+  padding: 0 0 0 0;
+}
+.button-container-ld input, .button-container input {
+  height: 28px;
+}
+
 .button-item {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+}
+
+.form-wrapper-ld {
+  display: flex;
+  justify-content: flex-start;
+  height: 118px;
+}
+.form-container-l {
+  width: @container-ld-width;
+  border: @form-container-border;
+  margin:0 8px 0 0;
+  padding: 8px;
+}
+.form-container-r {
+  width: @container-ld-width;
+  border: @form-container-border;
+  margin:0 8px 0 0;
+  padding: 8px;
+}
+.form-container-u {
+  width: 112px;
+  border: @form-container-border;
+  padding: 8px;
+}
+
+.form-container-l-label, .form-container-r-label, .form-container-u-label {
+  padding: 6px 0 0 0;
+  margin: 0 0 8px 0;
+  text-align: center;
 }

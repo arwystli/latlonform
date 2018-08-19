@@ -1,9 +1,37 @@
-commit 39319c5
+commit 0f5c878
+Author: Bob Hutchinson <hutch@whs4.whs>
+Date:   Sun Aug 19 17:37:15 2018 +0100
+
+    added distance functions
+
+Gruntfile.js
+README.md
+css/formalize.css
+css/layout.less
+css/main.css
+css/main.min.css
+css/style.less
+incs/form_ld.inc
+incs/form_ll.inc
+incs/funcs.inc
+incs/init.inc
+incs/layout.inc
+incs/page_ld.inc
+incs/page_ld_q.inc
+incs/page_ll.inc
+incs/page_ll_q.inc
+js/all.js
+js/all.min.js
+js/jquery.formalize.js
+js/main.js
+
+commit 19057ce
 Author: Bob Hutchinson <hutch@whs4.whs>
 Date:   Wed Jul 25 08:34:54 2018 +0100
 
     better footer
 
+CHANGELOG.txt
 incs/layout.inc
 
 commit 7a5242e

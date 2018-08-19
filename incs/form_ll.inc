@@ -1,13 +1,12 @@
 <?php
 /**
- * @file form.inc
+ * @file form_ll.inc
  * @author Bob Hutchinson hutch@arwystli.net
  * @copyright GNU GPL
  *
  * An example structure in PHP, form
  */
  ?>
-
 <form action="<?php print SUB_URL . '/' . $vars['page'] ?>" method="post">
   <div class="form-container">
     <div class="form-input-item-label" >Latitude:</div>

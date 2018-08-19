@@ -10,7 +10,7 @@
 $vars = latlonform_get_defaults();
 
 // enable for dev mode
-$vars['dev'] = TRUE;
+#$vars['dev'] = TRUE;
 
 $form_state = array();
 $form_state['values'] = $_REQUEST;

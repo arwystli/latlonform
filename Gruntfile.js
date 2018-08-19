@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       dist: {
-        src: ['js/jquery.latlonfield.js', 'js/main.js'],
+        src: ['js/jquery.latlonfield.js', 'js/main.js', 'js/jquery.formalize.js'],
         dest: 'js/all.js'
       }
     },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     },
     cssmin: {
       target: {
-        src: ["css/main.css"],
+        src: ["css/formalize.css", "css/main.css"],
         dest: "css/main.min.css"
       }
     },
