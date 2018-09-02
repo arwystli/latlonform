@@ -17,16 +17,16 @@
   </head>
   <body>
     <div id="mainpage" class="page">
-      <h3 class="pagetitle"><?php print $vars['pagetitle']; ?></h3>
-      <p class="strapline"><?php print $vars['strapline']; ?></p>
-      <div>
-        <div id="main-menu">
+      <div id="header">
+        <h3 class="pagetitle"><?php print $vars['pagetitle']; ?></h3>
+        <p class="strapline"><?php print $vars['strapline']; ?></p>
+      </div>
+      <div id="main-menu">
         <?php
           foreach($vars['pagesreg'] AS $k => $v) {
-            print '<li><a href="' . SUB_URL . '/' . $k . '" class="link' . ($vars['page'] == $k ? ' active' : '') . '" >' . $v . '</a></li>';
+            print '<div class="main-menu-item" ><a href="' . SUB_URL . '/' . $k . '" class="link' . ($vars['page'] == $k ? ' active' : '') . '" >' . $v . '</a></div>';
           }
         ?>
-        </div>
       </div>
 <?php
 include(BASE_PATH . '/incs/page_' . $vars['page'] . '.inc');

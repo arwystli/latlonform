@@ -1,9 +1,25 @@
-commit 0f5c878
+commit c5653d6
+Author: Bob Hutchinson <hutch@whs4.whs>
+Date:   Sun Sep 2 15:23:49 2018 +0100
+
+    added area functions
+
+css/layout.less
+css/main.css
+css/main.min.css
+css/style.less
+incs/funcs.inc
+incs/layout.inc
+incs/page_ld.inc
+incs/page_ld_q.inc
+
+commit f824b4a
 Author: Bob Hutchinson <hutch@whs4.whs>
 Date:   Sun Aug 19 17:37:15 2018 +0100
 
     added distance functions
 
+CHANGELOG.txt
 Gruntfile.js
 README.md
 css/formalize.css

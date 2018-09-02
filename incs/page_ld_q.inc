@@ -20,4 +20,7 @@ if (
   $vars['returns'][$vars['page']]['lon2'] = latlonform_normalizelon($form_state['values']['lon2']);
   $vars['returns'][$vars['page']]['unit'] = $form_state['values']['unit'];
   $vars['returns'][$vars['page']]['dist'] = number_format(latlonform_convert_meters_to_distance(latlonform_earth_distance($vars['returns'][$vars['page']]['lat1'], $vars['returns'][$vars['page']]['lon1'], $vars['returns'][$vars['page']]['lat2'], $vars['returns'][$vars['page']]['lon2']), $form_state['values']['unit']), $vars['settings'][$vars['page']]['dpt']);
+  $vars['returns'][$vars['page']]['circ'] = number_format( latlonform_circ_area($vars['returns'][$vars['page']]['lat1'], $vars['returns'][$vars['page']]['lon1'], $vars['returns'][$vars['page']]['lat2'], $vars['returns'][$vars['page']]['lon2'], $form_state['values']['unit']), 2);
+  $vars['returns'][$vars['page']]['rect'] = number_format( latlonform_rect_area($vars['returns'][$vars['page']]['lat1'], $vars['returns'][$vars['page']]['lon1'], $vars['returns'][$vars['page']]['lat2'], $vars['returns'][$vars['page']]['lon2'], $form_state['values']['unit']), 2);
+
 }

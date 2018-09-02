@@ -1,18 +1,26 @@
 @form-itemheight: 24px;
 @container-ld-width: 236px;
 @button-container-ld-width: 678px;
-@form-container-border: 1px solid #A0A0A0;
+
+.strapline {
+  margin-left: 12px;
+}
 
 #mainpage {
-  padding: 8px 8px 8px 8px;
+  padding: 4px 8px 8px 8px;
   width: 1280px;
   margin: auto;
 }
-
-#main-menu li {
+#main-menu {
+  margin:0;
+}
+/*
+#main-menu div {
   display: inline;
   padding: 0px 3px 0px 3px;
+
 }
+*/
 
 /* flexbox */
 .form-container {
@@ -68,19 +76,16 @@
 }
 .form-container-l {
   width: @container-ld-width;
-  border: @form-container-border;
   margin:0 8px 0 0;
   padding: 8px;
 }
 .form-container-r {
   width: @container-ld-width;
-  border: @form-container-border;
   margin:0 8px 0 0;
   padding: 8px;
 }
 .form-container-u {
   width: 112px;
-  border: @form-container-border;
   padding: 8px;
 }
 

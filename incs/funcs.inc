@@ -14,6 +14,7 @@
  *
  */
 function latlonform_get_defaults() {
+  global $latlon_debug;
   $defaults = array(
     'headertitle' => 'Latitudes and Longitudes',
     'pagetitle'   => 'Latitudes and Longitudes',
@@ -42,6 +43,9 @@ function latlonform_get_defaults() {
         'lon2' => 0,
         'unit' => 'km',
         'dist' => '',
+        'circ' => 0,
+        'rect' => 0,
+        'debug' => ''
       ),
     ),
     'settings' => array(
@@ -231,7 +235,7 @@ function latlonform_convert_meters_to_distance($meters, $distance_unit = 'km') {
     $distance_unit = 'km';
   }
   $conv = $units[$distance_unit];
-  // Convert meters to display units. formatting in theme_getlocations_fields_distance();
+  // Convert meters to display units.
   $retval = ($meters * $conv);
   return $retval;
 }
@@ -297,3 +301,98 @@ function latlonform_get_unit_names($unit = '', $type = 'plural') {
   }
   return $return;
 }
+
+/**
+ * Function
+ * Calculate the area of a circle where the centre is defined by $latitude1,$longitude1
+ * and the point on the circumference is defined by $latitude2,$longitude2
+ *
+ * @param float $latitude1
+ * @param float $longitude1
+ * @param float $latitude2
+ * @param float $longitude2
+ * @param string $distance_unit
+
+ * @return
+ *   Returns area of a circle
+ *
+ */
+function latlonform_circ_area($latitude1, $longitude1, $latitude2, $longitude2, $distance_unit = 'km') {
+
+  $lat_n = floatval($latitude1);
+  $lat_s = floatval($latitude2);
+  if ($latitude2 > $latitude1) {
+    $lat_n = floatval($latitude2);
+    $lat_s = floatval($latitude1);
+  }
+
+  $lon_w = floatval($longitude1);
+  $lon_e = floatval($longitude2);
+  if ($longitude2 > $longitude1) {
+    $lon_w = floatval($longitude2);
+    $lon_e = floatval($longitude1);
+  }
+
+  $dist1a = latlonform_earth_distance($lat_n, $lon_w, $lat_n, $lon_e); // NW - NE
+  $dist1b = latlonform_earth_distance($lat_s, $lon_w, $lat_s, $lon_e); // SW - SE
+  // average between the two
+  $dist1v = ($dist1a + $dist1b) / 2;
+  // convert to units
+  $dist1 = latlonform_convert_meters_to_distance($dist1v, $distance_unit);
+  $radius = $dist1 / 2;
+  $area = M_PI * pow($radius, 2);
+  return $area;
+}
+
+/**
+ * Function
+ * Calculate the area of a rectangle
+ *
+ * @param float $latitude1
+ * @param float $longitude1
+ * @param float $latitude2
+ * @param float $longitude2
+ * @param string $distance_unit
+ *
+ * @return
+ *   Returns area
+ *
+ */
+function latlonform_rect_area($latitude1, $longitude1, $latitude2, $longitude2, $distance_unit = 'km') {
+
+  if ($latitude1 == $latitude2 || $longitude1 == $longitude2) {
+    return 0;
+  }
+
+  $lat_n = floatval($latitude1);
+  $lat_s = floatval($latitude2);
+  if ($latitude2 > $latitude1) {
+    $lat_n = floatval($latitude2);
+    $lat_s = floatval($latitude1);
+  }
+
+  $lon_w = floatval($longitude1);
+  $lon_e = floatval($longitude2);
+  if ($longitude2 > $longitude1) {
+    $lon_w = floatval($longitude2);
+    $lon_e = floatval($longitude1);
+  }
+  // horizontal
+  $dist1a = latlonform_earth_distance($lat_n, $lon_w, $lat_n, $lon_e); // NW - NE
+  $dist1b = latlonform_earth_distance($lat_s, $lon_w, $lat_s, $lon_e); // SW - SE
+  // average between the two
+  $dist1v = ($dist1a + $dist1b) / 2;
+  // convert to units
+  $dist1 = latlonform_convert_meters_to_distance($dist1v, $distance_unit);
+  // vertical
+  $dist2a = latlonform_earth_distance($lat_n, $lon_w, $lat_s, $lon_w); // NW - SW
+  $dist2b = latlonform_earth_distance($lat_n, $lon_e, $lat_s, $lon_e); // NE - SE
+  // average between the two
+  $dist2v = ($dist2a + $dist2b) / 2;
+  // convert to units
+  $dist2 = latlonform_convert_meters_to_distance($dist2v, $distance_unit);
+  // calculate the area
+  $area = $dist1 * $dist2;
+  return $area;
+}
+

@@ -1,15 +1,23 @@
-@activelinkcolor: #4040B0;
+@activelinkcolor: #404040;
+@headerbg: #C0C0C0;
 @footerbg: #C0C0C0;
 @footerfg: #404040;
 @form-container-bg: #F8F8FF;
 @form-container-label-bg: #E8E8EF;
+@form-container-border: 1px solid #D0D0D0;
+@main-menubg: #D0D0D0;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+#header {
+  background: @headerbg;
+  padding: 8px;
+  margin-bottom: 14px;
+}
 .pagetitle {
-  font-size: 18px;
+  font-size: 20px;
+  margin: 0;
 }
 .strapline {
   font-size: 14px;
@@ -35,6 +43,7 @@ body {
 }
 .form-container-l, .form-container-r, .form-container-u {
   background: @form-container-bg;
+  border: @form-container-border;
 }
 
 #fmsubmbtn {
@@ -45,3 +54,16 @@ body {
   background:  @form-container-label-bg;
   height: 22px;
 }
+.main-menu-item {
+  display: inline;
+  background: @main-menubg;
+  padding: 8px 8px 8px 8px;
+  margin: 0 8px 0 0;
+  height: 24px;
+/*  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;*/
+  border-radius: 6px;
+}
+
